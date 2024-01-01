@@ -1,0 +1,19 @@
+{
+  "name": "quint",
+  "version": "1.0.0",
+  "description": "Symbolic manipulation of quantum objects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/MartinRixham/Quint.git"
+  },
+  "author": "Martin Rixham",
+  "license": "AGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/MartinRixham/Quint/issues"
+  },
+  "homepage": "https://github.com/MartinRixham/Quint#readme"
+}
