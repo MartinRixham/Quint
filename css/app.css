@@ -1,0 +1,27 @@
+@font-face
+{
+    font-family: Computer-Modern;
+    src: url("/font/cmunrm.otf");
+}
+
+h1, h2, h3, h4, h5, h5, h6, p
+{
+	font-family: Computer-Modern, Serif;
+}
+
+.app
+{
+	display: flex;
+}
+
+.app .page
+{
+	min-width: 1000px;
+}
+
+.app .quint
+{
+	display: inline-block;
+	margin-top: 2%;
+}
+
