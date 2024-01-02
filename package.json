@@ -2,9 +2,11 @@
   "name": "quint",
   "version": "1.0.0",
   "description": "Symbolic manipulation of quantum objects.",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "parcel build --no-optimize index.html",
+    "test": "parcel build test/index.html --no-optimize --dist-dir dist/test && grunt",
+    "start": "parcel index.html",
+    "start:test": "http-server dist/test"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,20 @@
   "bugs": {
     "url": "https://github.com/MartinRixham/Quint/issues"
   },
-  "homepage": "https://github.com/MartinRixham/Quint#readme"
+  "homepage": "https://github.com/MartinRixham/Quint#readme",
+  "dependencies": {
+    "@datumjs/pieces": "0.5.0",
+    "Datum": "0.13.3",
+    "uikit": "3.17.11"
+  },
+  "devDependencies": {
+    "grunt": "1.6.1",
+    "grunt-contrib-connect": "4.0.0",
+    "grunt-contrib-qunit": "8.0.1",
+    "grunt-eslint": "24.3.0",
+    "http-server": "14.1.1",
+    "parcel": "2.10.3",
+    "process": "0.11.10",
+    "qunit": "2.20.0"
+  }
 }
