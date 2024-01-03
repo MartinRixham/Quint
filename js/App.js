@@ -1,6 +1,7 @@
-import { NavPiece } from "@datumjs/pieces";
+import { SlideNavPiece } from "@datumjs/pieces";
 
 import Worksheet from "~/js/Worksheet";
+import Instructions from "~/js/Instructions";
 
 import html from "~/html/app.html";
 
@@ -18,11 +19,15 @@ export default class App {
 		this.#fetchPage(element, html);
 
 		this.currentPage =
-			new NavPiece([
+			new SlideNavPiece([
 				{
-					route: "home",
+					route: "worksheet",
 					page: new Worksheet(this.#fetchPage)
 				},
+				{
+					route: "instructions",
+					page: new Instructions(this.#fetchPage)
+				}
 			]);
 	}
 }

@@ -48,6 +48,16 @@ input
 	margin-top: 2%;
 }
 
+.app .nav * {
+	display: inline-block;
+	margin-right: 2%;
+	cursor: pointer;
+}
+
+.app .nav *:hover {
+	text-decoration: underline;
+}
+
 .worksheet .terminal {
 	background: #444;
 	color: #ddd;
