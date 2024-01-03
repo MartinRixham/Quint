@@ -1,8 +1,15 @@
 <div class="app">
-	<div class="uk-container">
-		<a class="quint" href="#home">
-			<h1>Quint</h1>
-		</a>
-		<div class="page" data-bind="currentPage"></div>
-	</div>
+  <div class="uk-container">
+    <a class="quint" href="#home">
+      <h1>Quint</h1>
+    </a>
+    <h2>Instructions</h2>
+    <p>
+      Quint performs symbolic manipulation of tensors representing quantum systems.
+      It uses the convention \(\ket{\theta} = \begin{pmatrix} \cos{\frac{\theta}{2}} \\ \sin{\frac{\theta}{2}} \end{pmatrix}\),
+      so the computational basis is \[\ket{0} = \begin{pmatrix} 1 \\ 0 \end{pmatrix}, \ket{\pi} = \begin{pmatrix} 0 \\ 1 \end{pmatrix}\]
+      State vectors are automatically normalised so \[\ket{0} + \ket{\pi} = \begin{pmatrix} \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} \end{pmatrix}\]
+    </p>
+    <div class="page" data-bind="currentPage"></div>
+  </div>
 </div>

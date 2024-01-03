@@ -1,6 +1,8 @@
-import { NavPiece } from "@datumjs/pieces"
+import { NavPiece } from "@datumjs/pieces";
 
-import html from "~/html/app.html"
+import Worksheet from "~/js/Worksheet";
+
+import html from "~/html/app.html";
 
 export default class App {
 
@@ -19,7 +21,7 @@ export default class App {
 			new NavPiece([
 				{
 					route: "home",
-					page: {}
+					page: new Worksheet(this.#fetchPage)
 				},
 			]);
 	}

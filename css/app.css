@@ -4,9 +4,32 @@
     src: url("/font/cmunrm.otf");
 }
 
+@font-face
+{
+    font-family: Computer-Modern-Mono;
+    src: url("/font/cmuntt.otf");
+}
+
+html
+{
+	background: #fff9f0;
+}
+
 h1, h2, h3, h4, h5, h5, h6, p
 {
 	font-family: Computer-Modern, Serif;
+}
+
+p
+{
+	font-size: large;
+}
+
+input
+{
+	font-family: Computer-Modern-Mono, monospace;
+	font-size: large;
+	width: 100%;
 }
 
 .app
@@ -23,5 +46,13 @@ h1, h2, h3, h4, h5, h5, h6, p
 {
 	display: inline-block;
 	margin-top: 2%;
+}
+
+.worksheet .terminal {
+	background: #444;
+	color: #ddd;
+	padding: 1%;
+	border: 0;
+	border-radius: 2px;
 }
 
