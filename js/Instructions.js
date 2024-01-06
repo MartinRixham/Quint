@@ -11,6 +11,6 @@ export default class Instructions {
 
 	onBind(element) {
 
-		this.#fetchPage(element, html, () => MathJax.typeset());
+		this.#fetchPage(element, html);
 	}
 }

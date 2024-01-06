@@ -1,4 +1,4 @@
-import { SlideNavPiece } from "@datumjs/pieces";
+import { SlideNavPiece, NavButton } from "@datumjs/pieces";
 
 import Worksheet from "~/js/Worksheet";
 import Instructions from "~/js/Instructions";
@@ -8,6 +8,12 @@ import html from "~/html/app.html";
 export default class App {
 
 	#fetchPage;
+
+	currentPage;
+
+	worksheet;
+
+	instructions;
 
 	constructor(fetchPage) {
 
@@ -29,5 +35,9 @@ export default class App {
 					page: new Instructions(this.#fetchPage)
 				}
 			]);
+
+		this.worksheet = new NavButton(0, this.currentPage);
+
+		this.instructions = new NavButton(1, this.currentPage);
 	}
 }

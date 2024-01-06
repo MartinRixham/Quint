@@ -1,7 +1,6 @@
-export default function fetchPage(element, page, done) {
+export default function fetchPage(element, page) {
 
 	fetch(page.replace(/\?.*/, ""))
 		.then(response => response.text())
-		.then(html => element.innerHTML = html)
-		.then(() => done && done());
+		.then(html => element.innerHTML = html);
 }

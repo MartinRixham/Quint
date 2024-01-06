@@ -1,8 +1,93 @@
 <div>
   <p>
     Quint performs symbolic manipulation of tensors representing quantum systems.
-    It uses the convention \(\ket{\theta} = \begin{pmatrix} \cos{\frac{\theta}{2}} \\ \sin{\frac{\theta}{2}} \end{pmatrix}\),
-    so the computational basis is \[\ket{0} = \begin{pmatrix} 1 \\ 0 \end{pmatrix}, \ket{\pi} = \begin{pmatrix} 0 \\ 1 \end{pmatrix}\]
-    State vectors are automatically normalised so \[\ket{0} + \ket{\pi} = \begin{pmatrix} \frac{1}{\sqrt{2}} \\ \frac{1}{\sqrt{2}} \end{pmatrix}\]
+    It uses the convention
+    <math>
+      <mrow>
+        <mo>|</mo>
+        <mi>&theta;</mi>
+        <mo>&rang;</mo>
+      </mrow>
+      <mo>=</mo>
+      <mrow>
+        <mo>(</mo>
+        <mtable>
+          <mtr>
+            <mtd><mo>cos</mo><mfrac><mi>&theta;</mi><mn>2<mn></mn></mn></mfrac></mtd>
+          </mtr>
+          <mtr>
+            <mtd><mo>sin</mo><mfrac><mi>&theta;</mi><mn>2<mn></mn></mn></mfrac></mtd>
+          </mtr>
+        </mtable>
+        <mo>)</mo>
+      </mrow>
+    </math>,
+    so the computational basis is
+    <math display="block">
+      <mrow>
+        <mo>|</mo>
+        <mn>0</mn>
+        <mo>&rang;</mo>
+      </mrow>
+      <mo>=</mo>
+      <mrow>
+        <mo>(</mo>
+        <mtable>
+          <mtr>
+            <mtd><mn>1</mn></mtd>
+          </mtr>
+          <mtr>
+            <mtd><mn>0</mn></mtd>
+          </mtr>
+        </mtable>
+        <mo>)</mo>
+      </mrow>
+      <mtext>,&nbsp;&nbsp;</mtext>
+      <mrow>
+        <mo>|</mo>
+        <mn>&pi;</mn>
+        <mo>&rang;</mo>
+      </mrow>
+      <mo>=</mo>
+      <mrow>
+        <mo>(</mo>
+        <mtable>
+          <mtr>
+            <mtd><mn>0</mn></mtd>
+          </mtr>
+          <mtr>
+            <mtd><mn>1</mn></mtd>
+          </mtr>
+        </mtable>
+        <mo>)</mo>
+      </mrow>
+    </math>
+    State vectors are automatically normalised so
+    <math display="block">
+      <mrow>
+        <mo>|</mo>
+        <mn>0</mn>
+        <mo>&rang;</mo>
+      </mrow>
+      <mo>+</mo>
+      <mrow>
+        <mo>|</mo>
+        <mn>&pi;</mn>
+        <mo>&rang;</mo>
+      </mrow>
+      <mo>=</mo>
+      <mrow>
+        <mo>(</mo>
+        <mtable>
+          <mtr>
+            <mtd><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac></mtd>
+          </mtr>
+          <mtr>
+            <mtd><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac></mtd>
+          </mtr>
+        </mtable>
+        <mo>)</mo>
+      </mrow>
+    </math>
   </p>
 </div>

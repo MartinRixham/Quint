@@ -42,7 +42,7 @@ input
 	min-width: 1000px;
 }
 
-.app .quint
+.app h1
 {
 	display: inline-block;
 	margin-top: 2%;
@@ -54,7 +54,7 @@ input
 	cursor: pointer;
 }
 
-.app .nav *:hover {
+.app .nav .active, .app .nav *:hover {
 	text-decoration: underline;
 }
 

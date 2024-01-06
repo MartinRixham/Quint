@@ -5,7 +5,8 @@ QUnit.module("app");
 
 QUnit.test("Test app", async assert => {
 
-	const app = new App();
+	const app = new App(() => {});
+	app.onBind();
 
 	assert.ok(app);
 });
