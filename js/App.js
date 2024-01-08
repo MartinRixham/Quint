@@ -1,5 +1,6 @@
 import { SlideNavPiece, NavButton } from "@datumjs/pieces";
 
+import fetchPage from "~/js/fetchPage";
 import Worksheet from "~/js/Worksheet";
 import Instructions from "~/js/Instructions";
 
@@ -7,37 +8,24 @@ import html from "~/html/app.html";
 
 export default class App {
 
-	#fetchPage;
+	currentPage =
+		new SlideNavPiece([
+			{
+				route: "worksheet",
+				page: new Worksheet()
+			},
+			{
+				route: "instructions",
+				page: new Instructions()
+			}
+		]);
 
-	currentPage;
+	worksheet = new NavButton(0, this.currentPage);
 
-	worksheet;
-
-	instructions;
-
-	constructor(fetchPage) {
-
-		this.#fetchPage = fetchPage;
-	}
+	instructions = new NavButton(1, this.currentPage);
 
 	onBind(element) {
 
-		this.#fetchPage(element, html);
-
-		this.currentPage =
-			new SlideNavPiece([
-				{
-					route: "worksheet",
-					page: new Worksheet(this.#fetchPage)
-				},
-				{
-					route: "instructions",
-					page: new Instructions(this.#fetchPage)
-				}
-			]);
-
-		this.worksheet = new NavButton(0, this.currentPage);
-
-		this.instructions = new NavButton(1, this.currentPage);
+		fetchPage(element, html);
 	}
 }

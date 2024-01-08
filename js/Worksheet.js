@@ -1,16 +1,11 @@
 import html from "~/html/worksheet.html";
 
+import fetchPage from "~/js/fetchPage";
+
 export default class Worksheet {
-
-	#fetchPage;
-
-	constructor(fetchPage) {
-
-		this.#fetchPage = fetchPage;
-	}
 
 	onBind(element) {
 
-		this.#fetchPage(element, html);
+		fetchPage(element, html);
 	}
 }

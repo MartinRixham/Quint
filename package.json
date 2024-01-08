@@ -6,7 +6,7 @@
     "parser": "peggy quint.pegjs",
     "build": "npm run parser && parcel build --no-optimize index.html",
     "test": "npm run parser && parcel build test/index.html --no-optimize --dist-dir dist/test && grunt",
-    "start": "parcel index.html",
+    "start": "npm run parser && parcel index.html",
     "start:test": "http-server dist/test"
   },
   "repository": {
