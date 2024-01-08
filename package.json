@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "Symbolic manipulation of quantum objects.",
   "scripts": {
-    "build": "parcel build --no-optimize index.html",
-    "test": "parcel build test/index.html --no-optimize --dist-dir dist/test && grunt",
+    "parser": "peggy quint.pegjs",
+    "build": "npm run parser && parcel build --no-optimize index.html",
+    "test": "npm run parser && parcel build test/index.html --no-optimize --dist-dir dist/test && grunt",
     "start": "parcel index.html",
     "start:test": "http-server dist/test"
   },
@@ -21,6 +22,7 @@
   "dependencies": {
     "@datumjs/pieces": "0.5.0",
     "Datum": "0.13.3",
+    "peggy": "3.0.2",
     "uikit": "3.17.11"
   },
   "devDependencies": {
