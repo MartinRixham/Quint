@@ -1,30 +1,9 @@
-// Simple Arithmetics Grammar
-// ==========================
-//
-// Accepts expressions like "2 * (3 + 4)" and computes their value.
+value = pi / float / integer
 
-Expression
-  = head:Term tail:(_ ("+" / "-") _ Term)* {
-      return tail.reduce(function(result, element) {
-        if (element[1] === "+") { return result + element[3]; }
-        if (element[1] === "-") { return result - element[3]; }
-      }, head);
-    }
+pi = "pi" { return { value: "pi", rational: false }; }
 
-Term
-  = head:Factor tail:(_ ("*" / "/") _ Factor)* {
-      return tail.reduce(function(result, element) {
-        if (element[1] === "*") { return result * element[3]; }
-        if (element[1] === "/") { return result / element[3]; }
-      }, head);
-    }
+float = [0-9]+ "." [0-9]+ { return { value: parseFloat(text()), rational: true }; }
 
-Factor
-  = "(" _ expr:Expression _ ")" { return expr; }
-  / Integer
+integer = [0-9]+ { return { value: parseInt(text()), rational: true }; }
 
-Integer "integer"
-  = _ [0-9]+ { return parseInt(text(), 10); }
-
-_ "whitespace"
-  = [ \t\n\r]*
+_ "whitespace" = [ \t\n\r]*
