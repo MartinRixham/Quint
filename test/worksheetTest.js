@@ -15,5 +15,5 @@ QUnit.test("calcualte sum", async assert => {
 
 	worksheet.terminal().value("1 + 2");
 
-	assert.deepEqual(worksheet.answer().text(), "The answer to 1 + 2 parsed is coming.");
+	assert.equal(worksheet.answer().text(), "The answer to 1 + 2 parsed is coming.");
 });
