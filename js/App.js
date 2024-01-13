@@ -2,6 +2,8 @@ import { SlideNavPiece, NavButton } from "@datumjs/pieces";
 
 import fetchPage from "~/js/fetchPage";
 import Worksheet from "~/js/Worksheet";
+import quint from "~/quint";
+import Calculator from "~/js/Calculator";
 import Instructions from "~/js/Instructions";
 
 import html from "~/html/app.html";
@@ -12,7 +14,7 @@ export default class App {
 		new SlideNavPiece([
 			{
 				route: "worksheet",
-				page: new Worksheet()
+				page: new Worksheet(quint, new Calculator())
 			},
 			{
 				route: "instructions",
