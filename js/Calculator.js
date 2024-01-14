@@ -1,7 +1,14 @@
+import Value from "~/js/Value";
+
 export default class Calcualtor {
 
-	calculate(sum) {
+	calculate(expression) {
 
-		return sum;
+		if (expression.value) {
+
+			return new Value(expression).evaluate();
+		}
+
+		return "Unknown expression";
 	}
 }
