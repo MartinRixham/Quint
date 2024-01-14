@@ -17,3 +17,11 @@ QUnit.test("parse pi", async assert => {
 
 	assert.deepEqual(quint.parse("pi"), { value: "pi", rational: false });
 });
+
+QUnit.test("parse variable", async assert => {
+
+	assert.deepEqual(quint.parse("theta"), { identifier: "theta" });
+	assert.deepEqual(quint.parse("x"), { identifier: "x" });
+	assert.deepEqual(quint.parse("y"), { identifier: "y" });
+	assert.deepEqual(quint.parse("z"), { identifier: "z" });
+});
