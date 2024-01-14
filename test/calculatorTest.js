@@ -11,3 +11,12 @@ QUnit.test("calcualte rational number", async assert => {
 
 	assert.strictEqual(result, 12345.0);
 });
+
+QUnit.test("calculate variable", async assert => {
+
+	const calculator = new Calculator();
+
+	const result = calculator.calculate({ identifier: "theta" });
+
+	assert.strictEqual(result, "θ");
+});
