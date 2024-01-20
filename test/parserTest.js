@@ -25,3 +25,8 @@ QUnit.test("parse variable", async assert => {
 	assert.deepEqual(quint.parse("y"), { identifier: "y" });
 	assert.deepEqual(quint.parse("z"), { identifier: "z" });
 });
+
+QUnit.test("parse ket", async assert => {
+
+	assert.deepEqual(quint.parse("|theta>"), { angle: { identifier: "theta" } });
+});

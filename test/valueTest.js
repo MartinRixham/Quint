@@ -7,7 +7,7 @@ QUnit.test("evaluate rational number", async assert => {
 
 	const value = new Value({ value: 12345.0, rational: true });
 
-	assert.strictEqual(value.evaluate(), 12345.0);
+	assert.strictEqual(value.evaluate(), "<mn>12345</mn>");
 });
 
 QUnit.test("evaluate pi", async assert => {

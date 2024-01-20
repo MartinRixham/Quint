@@ -15,5 +15,9 @@ QUnit.test("calcualte sum", async assert => {
 
 	worksheet.terminal().value("1 + 2");
 
-	assert.equal(worksheet.answer().text(), "The answer to 1 + 2 parsed is coming.");
+	const div = document.createElement("DIV");
+
+	worksheet.answer().update(div)
+
+	assert.equal(div.innerHTML, "The answer to 1 + 2 parsed is coming.");
 });

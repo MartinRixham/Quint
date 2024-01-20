@@ -1,4 +1,8 @@
-expression = variable / value
+expression = real / ket
+
+ket = "|" angle:real ">" { return { angle: angle } }
+
+real = variable / value
 
 value = pi / float / integer
 

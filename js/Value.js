@@ -13,7 +13,7 @@ export default class Value {
 
 		if (value.rational) {
 
-			return value.value;
+			return `<mn>${value.value}</mn>`;
 		}
 		else {
 

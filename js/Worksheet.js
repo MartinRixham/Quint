@@ -1,4 +1,4 @@
-import { Text, Value } from "Datum";
+import { Update, Value } from "Datum";
 import html from "~/html/worksheet.html";
 
 import fetchPage from "~/js/fetchPage";
@@ -32,5 +32,5 @@ export default class Worksheet {
 		return value;
 	});
 
-	answer = new Text(() => this.result);
+	answer = new Update(element => { element.innerHTML = this.result || "" });
 }
