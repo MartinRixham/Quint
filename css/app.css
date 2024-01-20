@@ -66,3 +66,6 @@ input
 	border-radius: 2px;
 }
 
+.worksheet .error {
+	color: red;
+}

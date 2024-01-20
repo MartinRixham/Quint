@@ -1,4 +1,4 @@
-import { Update, Value } from "Datum";
+import { Update, Text, Value } from "Datum";
 import html from "~/html/worksheet.html";
 
 import fetchPage from "~/js/fetchPage";
@@ -10,6 +10,8 @@ export default class Worksheet {
 	#calculator;
 
 	result;
+
+	errorMessage;
 
 	constructor(parser, calculator) {
 
@@ -24,13 +26,33 @@ export default class Worksheet {
 
 	terminal = new Value(value => {
 
-		if (value) {
+		if (!value) {
 
-			this.result = this.#calculator.calculate(this.#parser.parse(value));
+			return;
+		}
+
+		let syntaxTree;
+
+		try {
+
+			syntaxTree = this.#parser.parse(value);
+		}
+		catch (error) {
+
+			this.errorMessage = error.message;
+			this.result = null;
+		}
+
+		if (syntaxTree) {
+
+			this.errorMessage = null;
+			this.result = this.#calculator.calculate(syntaxTree);
 		}
 
 		return value;
 	});
 
 	answer = new Update(element => { element.innerHTML = this.result || "" });
+
+	error = new Text(() => this.errorMessage || "");
 }
