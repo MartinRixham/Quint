@@ -39,7 +39,7 @@ export default class Worksheet {
 		}
 		catch (error) {
 
-			this.errorMessage = error.message;
+			this.errorMessage = `${error.location.start.column}:${error.message}`;
 			this.result = null;
 		}
 

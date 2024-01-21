@@ -27,7 +27,7 @@ QUnit.test("uparsable expression", async assert => {
 
 	const worksheet = new Worksheet({
 
-		parse: () => { throw new Error("Didn't parse."); }
+		parse: () => { throw { message: "Didn't parse.", location: { start: { column: 34 } } }; }
 	},
 	{
 		calculate: sum =>  "The answer to " + sum + " is coming."
@@ -40,5 +40,5 @@ QUnit.test("uparsable expression", async assert => {
 	worksheet.answer().update(div)
 
 	assert.equal(div.innerHTML, "");
-	assert.equal(worksheet.error().text(), "Didn't parse.");
+	assert.equal(worksheet.error().text(), "34:Didn't parse.");
 });

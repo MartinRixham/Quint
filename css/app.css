@@ -20,16 +20,9 @@ h1, h2, h3, h4, h5, h5, h6, p
 	font-family: Computer-Modern, Serif;
 }
 
-p
+p, div, input
 {
 	font-size: large;
-}
-
-input
-{
-	font-family: Computer-Modern-Mono, monospace;
-	font-size: large;
-	width: 100%;
 }
 
 .app
@@ -48,24 +41,31 @@ input
 	margin-top: 2%;
 }
 
-.app .nav * {
+.app .nav *
+{
 	display: inline-block;
 	margin-right: 2%;
 	cursor: pointer;
 }
 
-.app .nav .active, .app .nav *:hover {
+.app .nav .active, .app .nav *:hover
+{
 	text-decoration: underline;
 }
 
-.worksheet .terminal {
+.worksheet .terminal
+{
+	font-family: Computer-Modern-Mono, monospace;
+	width: 100%;
 	background: #444;
 	color: #ddd;
 	padding: 1%;
 	border: 0;
-	border-radius: 2px;
+	border-radius: 3px;
+	margin-bottom: 2%;
 }
 
-.worksheet .error {
+.worksheet .error
+{
 	color: red;
 }
