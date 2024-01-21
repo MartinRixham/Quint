@@ -1,5 +1,5 @@
 import QUnit from "qunit";
-import Value from "~/js/Value";
+import Value from "~/js/expression/Value";
 
 QUnit.module("value");
 
