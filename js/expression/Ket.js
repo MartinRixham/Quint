@@ -7,8 +7,11 @@ export default class Ket {
 		this.#variable = variable;
 	}
 
-	evaluate() {
+	format() {
 
-		return `<mrow><mo>|</mo><mi>${this.#variable.evaluate()}</mi><mo>&rang;</mo></mrow>`;
+		return `<mrow><mo>|</mo><mi>${this.#variable.format()}</mi><mo>&rang;</mo></mrow>`;
+	}
+
+	calculate() {
 	}
 }

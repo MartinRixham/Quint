@@ -1,6 +1,6 @@
 export default class UnknownExpression {
 
-	evaluate() {
+	format() {
 
 		return "Unknown Expression";
 	}

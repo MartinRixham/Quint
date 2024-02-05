@@ -7,7 +7,7 @@ export default class Calcualtor {
 
 	calculate(expression) {
 
-		return `<math>${this.express(expression).evaluate()}</math>`;
+		return `<math>${this.express(expression).format()}</math>`;
 	}
 
 	express(expression) {

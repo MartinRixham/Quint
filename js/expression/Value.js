@@ -7,7 +7,7 @@ export default class Value {
 		this.#value = value;
 	}
 
-	evaluate() {
+	format() {
 
 		const value = this.#value;
 

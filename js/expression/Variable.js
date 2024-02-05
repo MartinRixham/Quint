@@ -7,7 +7,7 @@ export default class Variable {
 		this.#variable = variable;
 	}
 
-	evaluate() {
+	format() {
 
 		const identifier = this.#variable.identifier;
 
