@@ -1,3 +1,5 @@
+import Matrix from "~/js/expression/Matrix";
+
 export default class Ket {
 
 	#variable;
@@ -13,5 +15,7 @@ export default class Ket {
 	}
 
 	calculate() {
+
+		return new Matrix();
 	}
 }
