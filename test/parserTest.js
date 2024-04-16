@@ -30,3 +30,8 @@ QUnit.test("parse ket", async assert => {
 
 	assert.deepEqual(quint.parse("|theta>"), { angle: { identifier: "theta" } });
 });
+
+QUnit.test("parse zero ket", async assert => {
+
+	assert.deepEqual(quint.parse("|0>"), { angle: { value: 0, rational: true } });
+});

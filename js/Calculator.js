@@ -16,7 +16,7 @@ export default class Calcualtor {
 
 			return new Variable(expression);
 		}
-		else if (expression.value) {
+		else if (expression.value != undefined) {
 
 			return new Value(expression);
 		}

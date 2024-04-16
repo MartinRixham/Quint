@@ -18,7 +18,7 @@ QUnit.test("calculate variable", async assert => {
 
 	const result = calculator.calculate({ identifier: "theta" });
 
-	assert.strictEqual(result, "<math>&theta;</math>");
+	assert.strictEqual(result, "<math><mi>&theta;</mi></math>");
 });
 
 QUnit.test("calculate ket", async assert => {
@@ -28,4 +28,13 @@ QUnit.test("calculate ket", async assert => {
 	const result = calculator.calculate({ angle: { identifier: "theta" } });
 
 	assert.strictEqual(result, "<math><mrow><mo>|</mo><mi>&theta;</mi><mo>&rang;</mo></mrow></math>");
+});
+
+QUnit.test("calculate zero ket", async assert => {
+
+	const calculator = new Calculator();
+
+	const result = calculator.calculate({ angle: { value: 0, rational: true } });
+
+	assert.strictEqual(result, "<math><mrow><mo>|</mo><mn>0</mn><mo>&rang;</mo></mrow></math>");
 });

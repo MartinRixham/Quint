@@ -14,5 +14,5 @@ QUnit.test("format pi", async assert => {
 
 	const value = new Value({ value: "pi", rational: false });
 
-	assert.strictEqual(value.format(), "π");
+	assert.strictEqual(value.format(), "<mi>π</mi>");
 });

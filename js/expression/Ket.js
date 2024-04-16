@@ -11,7 +11,7 @@ export default class Ket {
 
 	format() {
 
-		return `<mrow><mo>|</mo><mi>${this.#variable.format()}</mi><mo>&rang;</mo></mrow>`;
+		return `<mrow><mo>|</mo>${this.#variable.format()}<mo>&rang;</mo></mrow>`;
 	}
 
 	calculate() {

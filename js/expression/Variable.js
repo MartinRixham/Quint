@@ -13,7 +13,7 @@ export default class Variable {
 
 		switch (identifier) {
 			case "theta":
-				return "&theta;";
+				return "<mi>&theta;</mi>";
 			default:
 				return identifier ;
 		}

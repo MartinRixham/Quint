@@ -19,7 +19,7 @@ export default class Value {
 
 			switch (value.value) {
 				case "pi":
-					return "π";
+					return "<mi>π</mi>";
 				default:
 					return "Unknown symbol" ;
 			}
