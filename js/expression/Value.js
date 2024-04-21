@@ -25,4 +25,9 @@ export default class Value {
 			}
 		}
 	}
+
+	calculate() {
+
+		return null;
+	}
 }

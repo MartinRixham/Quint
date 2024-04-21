@@ -5,9 +5,22 @@ import UnknownExpression from "~/js/expression/UnknownExpression";
 
 export default class Calcualtor {
 
+	#startMaths = `<math display="block">`;
+
+	#endMaths = `</math>`;
+
 	calculate(expression) {
 
-		return `<math>${this.express(expression).format()}</math>`;
+		let calculation = this.express(expression);
+		let formatted = [];
+
+		while (calculation) {
+
+			formatted.push(calculation.format());
+			calculation = calculation.calculate();
+		}
+
+		return `${this.#startMaths}${formatted.join(`${this.#endMaths}${this.#startMaths}<mo>=</mo>`)}${this.#endMaths}`;
 	}
 
 	express(expression) {

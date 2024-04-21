@@ -22,6 +22,11 @@ export default class Matrix {
 		return string + "</mtable><mo>)</mo></mrow>";
 	}
 
+	calculate() {
+
+		return null;
+	}
+
 	#formatRow(row) {
 
 		let string = "<mtr>";

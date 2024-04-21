@@ -16,6 +16,6 @@ export default class Ket {
 
 	calculate() {
 
-		return new Matrix();
+		return new Matrix(0, []);
 	}
 }
