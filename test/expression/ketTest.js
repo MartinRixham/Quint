@@ -15,7 +15,7 @@ QUnit.test("format ket of pi", async assert => {
 
 QUnit.test("format ket of rational", async assert => {
 
-	const ket = new Ket(new Value({ value: 123.456, rational: true }));
+	const ket = new Ket(new Value({ value: 123.456 }));
 
 	assert.strictEqual(ket.format(), "<mrow><mo>|</mo><mn>123.456</mn><mo>&rang;</mo></mrow>");
 });

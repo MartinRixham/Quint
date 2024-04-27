@@ -15,7 +15,7 @@ export default class Pi {
 
 	sine() {
 
-		return new Value({ value: 1, rational: true });
+		return new Value({ value: 1 });
 	}
 
 	cosine() {

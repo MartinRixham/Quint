@@ -7,7 +7,7 @@ QUnit.test("calcualte rational number", async assert => {
 
 	const calculator = new Calculator();
 
-	const result = calculator.calculate({ value: 12345.0, rational: true });
+	const result = calculator.calculate({ value: 12345.0 });
 
 	assert.strictEqual(result, `<math display="block"><mn>12345</mn></math>`);
 });
@@ -25,7 +25,7 @@ QUnit.test("calculate ket", async assert => {
 
 	const calculator = new Calculator();
 
-	const result = calculator.calculate({ angle: { value: 0, rational: true }});
+	const result = calculator.calculate({ angle: { value: 0 }});
 
 	assert.strictEqual(result,
 		`<math display="block"><mrow><mo>|</mo><mn>0</mn><mo>&rang;</mo></mrow></math>

@@ -5,17 +5,17 @@ QUnit.module("parser");
 
 QUnit.test("parse integer", async assert => {
 
-	assert.deepEqual(quint.parse("12345"), { value: 12345, rational: true });
+	assert.deepEqual(quint.parse("12345"), { value: 12345 });
 });
 
 QUnit.test("parse float", async assert => {
 
-	assert.deepEqual(quint.parse("12345.0"), { value: 12345.0, rational: true });
+	assert.deepEqual(quint.parse("12345.0"), { value: 12345 });
 });
 
 QUnit.test("parse pi", async assert => {
 
-	assert.deepEqual(quint.parse("pi"), { value: "pi", rational: false });
+	assert.deepEqual(quint.parse("pi"), { value: "pi" });
 });
 
 QUnit.test("parse variable", async assert => {
@@ -33,5 +33,5 @@ QUnit.test("parse ket", async assert => {
 
 QUnit.test("parse zero ket", async assert => {
 
-	assert.deepEqual(quint.parse("|0>"), { angle: { value: 0, rational: true } });
+	assert.deepEqual(quint.parse("|0>"), { angle: { value: 0 } });
 });

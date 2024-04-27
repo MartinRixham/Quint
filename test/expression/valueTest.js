@@ -5,7 +5,7 @@ QUnit.module("value");
 
 QUnit.test("format rational number", async assert => {
 
-	const value = new Value({ value: 12345.0, rational: true });
+	const value = new Value({ value: 12345.0 });
 
 	assert.strictEqual(value.format(), "<mn>12345</mn>");
 });

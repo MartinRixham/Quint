@@ -197,9 +197,9 @@ function peg$parse(input, options) {
   var peg$e8 = peg$classExpectation([" ", "\t", "\n", "\r"], false, false);
 
   var peg$f0 = function(angle) { return { angle: angle } };
-  var peg$f1 = function() { return { value: "pi", rational: false }; };
-  var peg$f2 = function() { return { value: parseFloat(text()), rational: true }; };
-  var peg$f3 = function() { return { value: parseInt(text()), rational: true }; };
+  var peg$f1 = function() { return { value: "pi" }; };
+  var peg$f2 = function() { return { value: parseFloat(text()) }; };
+  var peg$f3 = function() { return { value: parseInt(text()) }; };
   var peg$f4 = function() { return { identifier: text() } };
   var peg$f5 = function() { return { identifier: "theta" } };
   var peg$currPos = 0;

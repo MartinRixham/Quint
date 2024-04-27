@@ -6,11 +6,11 @@ real = variable / value
 
 value = pi / float / integer
 
-pi = "pi" { return { value: "pi", rational: false }; }
+pi = "pi" { return { value: "pi" }; }
 
-float = [0-9]+ "." [0-9]+ { return { value: parseFloat(text()), rational: true }; }
+float = [0-9]+ "." [0-9]+ { return { value: parseFloat(text()) }; }
 
-integer = [0-9]+ { return { value: parseInt(text()), rational: true }; }
+integer = [0-9]+ { return { value: parseInt(text()) }; }
 
 variable = theta / [xyz] { return { identifier: text() } }
 
