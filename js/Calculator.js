@@ -1,5 +1,7 @@
 import Variable from "~/js/expression/Variable";
 import Value from "~/js/expression/Value";
+import Zero from "~/js/expression/Zero";
+import Pi from "~/js/expression/Pi";
 import Ket from "~/js/expression/Ket";
 import UnknownExpression from "~/js/expression/UnknownExpression";
 
@@ -31,7 +33,14 @@ export default class Calcualtor {
 		}
 		else if (expression.value != undefined) {
 
-			return new Value(expression);
+			switch (expression.value) {
+				case 0:
+					return new Zero();
+				case "pi":
+					return new Pi();
+				default:
+					return new Value(expression);
+			}
 		}
 		else if (expression.angle) {
 

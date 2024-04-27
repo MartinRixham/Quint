@@ -1,8 +1,8 @@
 export default class Matrix {
 
-	dimension = 1;
+	dimension;
 
-	table = [];
+	table;
 
 	constructor(dimension, table) {
 
@@ -33,7 +33,7 @@ export default class Matrix {
 
 		for (let i = 0; i < row.length; i++) {
 
-			string += `<mtd><mn>${row[i]}</mn></mtd>`;
+			string += `<mtd>${row[i].format()}</mtd>`;
 		}
 
 		return string + "</mtr>";

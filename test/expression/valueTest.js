@@ -9,10 +9,3 @@ QUnit.test("format rational number", async assert => {
 
 	assert.strictEqual(value.format(), "<mn>12345</mn>");
 });
-
-QUnit.test("format pi", async assert => {
-
-	const value = new Value({ value: "pi", rational: false });
-
-	assert.strictEqual(value.format(), "<mi>π</mi>");
-});

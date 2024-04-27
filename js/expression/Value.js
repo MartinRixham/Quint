@@ -9,21 +9,7 @@ export default class Value {
 
 	format() {
 
-		const value = this.#value;
-
-		if (value.rational) {
-
-			return `<mn>${value.value}</mn>`;
-		}
-		else {
-
-			switch (value.value) {
-				case "pi":
-					return "<mi>π</mi>";
-				default:
-					return "Unknown symbol" ;
-			}
-		}
+		return `<mn>${this.#value.value}</mn>`;
 	}
 
 	calculate() {

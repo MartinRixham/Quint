@@ -1,11 +1,20 @@
 import QUnit from "qunit";
 import Matrix from "~/js/expression/Matrix";
+import Value from "~/js/expression/Value";
 
 QUnit.module("matrix");
 
 QUnit.test("format square matrix", async assert => {
 
-	const matrix = new Matrix(2, [1, 2, 3, 4]);
+	const matrix =
+		new Matrix(
+			2,
+			[
+				new Value({ value: 1, rational: true }),
+				new Value({ value: 2, rational: true }),
+				new Value({ value: 3, rational: true }),
+				new Value({ value: 4, rational: true })
+			]);
 
 	assert.strictEqual(matrix.format(), `
       <mrow>

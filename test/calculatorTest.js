@@ -25,10 +25,20 @@ QUnit.test("calculate ket", async assert => {
 
 	const calculator = new Calculator();
 
-	const result = calculator.calculate({ angle: { identifier: "theta" } });
+	const result = calculator.calculate({ angle: { value: 0, rational: true }});
 
 	assert.strictEqual(result,
-		`<math display="block"><mrow><mo>|</mo><mi>&theta;</mi><mo>&rang;</mo></mrow></math>
-		<math display="block"><mo>=</mo><mrow><mo>(</mo><mtable></mtable><mo>)</mo></mrow></math>`
+		`<math display="block"><mrow><mo>|</mo><mn>0</mn><mo>&rang;</mo></mrow></math>
+		<math display="block">
+			<mo>=</mo>
+			<mrow>
+				<mo>(</mo>
+				<mtable>
+					<mtr><mtd><mn>1</mn></mtd></mtr>
+					<mtr><mtd><mn>0</mn></mtd></mtr>
+				</mtable>
+				<mo>)</mo>
+			</mrow>
+		</math>`
 			.replace(/[\n\t]/g, ""));
 });
