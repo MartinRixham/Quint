@@ -1,10 +1,12 @@
-expression = real / ket
+expression = sum / value
+
+sum = left:value _ "+" _ right:value { return { left: left, right: right } }
+
+value = real / ket
 
 ket = "|" angle:real ">" { return { angle: angle } }
 
-real = variable / value
-
-value = pi / float / integer
+real = variable / pi / float / integer
 
 pi = "pi" { return { value: "pi" }; }
 

@@ -2,4 +2,7 @@ dist/
 node_modules/
 .parcel-cache/
 
+quint.js
+
 *.swp
+
