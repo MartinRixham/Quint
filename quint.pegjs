@@ -1,6 +1,6 @@
 expression = sum / value
 
-sum = left:value _ "+" _ right:value { return { left: left, right: right } }
+sum = left:value _ "+" _ right:value { return { left: left, right: right, operator: "plus" } }
 
 value = real / ket
 

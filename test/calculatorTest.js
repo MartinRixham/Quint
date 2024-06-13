@@ -42,3 +42,12 @@ QUnit.test("calculate ket", async assert => {
 		</math>`
 			.replace(/[\n\t]/g, ""));
 });
+
+QUnit.test("calcualte addition", async assert => {
+
+	const calculator = new Calculator();
+
+	const result = calculator.calculate({ left: { value: 1 }, right: { value: 1 }, operator: "plus" });
+
+	assert.strictEqual(result, `<math display="block"><mn>1</mn><mo>+</mo><mn>1</mn></math>`);
+});

@@ -38,5 +38,5 @@ QUnit.test("parse zero ket", async assert => {
 
 QUnit.test("parse sum of numbers", async assert => {
 
-	assert.deepEqual(quint.parse("1 + pi"), { left: { value: 1 }, right: { value: "pi" } });
+	assert.deepEqual(quint.parse("1 + pi"), { left: { value: 1 }, right: { value: "pi" }, operator: "plus" });
 });

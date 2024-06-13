@@ -3,6 +3,7 @@ import Value from "~/js/expression/Value";
 import Zero from "~/js/expression/Zero";
 import Pi from "~/js/expression/Pi";
 import Ket from "~/js/expression/Ket";
+import Sum from "~/js/expression/Sum";
 import UnknownExpression from "~/js/expression/UnknownExpression";
 
 export default class Calcualtor {
@@ -45,6 +46,10 @@ export default class Calcualtor {
 		else if (expression.angle) {
 
 			return new Ket(this.express(expression.angle));
+		}
+		else if (expression.operator == "plus") {
+
+			return new Sum(this.express(expression.left), this.express(expression.right));
 		}
 
 		return new UnknownExpression();
