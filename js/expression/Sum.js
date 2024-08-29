@@ -17,6 +17,6 @@ export default class Sum {
 
 	calculate() {
 
-		return null;
+		return this.#left.add(this.#right);
 	}
 }

@@ -11,4 +11,8 @@ QUnit.test("add integers", async assert => {
 	const sum = new Sum(left, right);
 
 	assert.strictEqual(sum.format(), "<mn>1</mn><mo>+</mo><mn>2</mn>");
+
+	const result = sum.calculate();
+
+	assert.strictEqual(result.format(), "<mn>3</mn>");
 });

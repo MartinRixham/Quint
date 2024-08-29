@@ -16,4 +16,9 @@ export default class Value {
 
 		return null;
 	}
+
+	add(other) {
+
+		return new Value({ value: this.#value.value + other.#value.value });
+	}
 }

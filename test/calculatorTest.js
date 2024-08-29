@@ -27,8 +27,8 @@ QUnit.test("calculate ket", async assert => {
 
 	const result = calculator.calculate({ angle: { value: 0 }});
 
-	assert.strictEqual(result,
-		`<math display="block"><mrow><mo>|</mo><mn>0</mn><mo>&rang;</mo></mrow></math>
+	assert.strictEqual(result, `
+		<math display="block"><mrow><mo>|</mo><mn>0</mn><mo>&rang;</mo></mrow></math>
 		<math display="block">
 			<mo>=</mo>
 			<mrow>
@@ -39,8 +39,7 @@ QUnit.test("calculate ket", async assert => {
 				</mtable>
 				<mo>)</mo>
 			</mrow>
-		</math>`
-			.replace(/[\n\t]/g, ""));
+		</math>`.replace(/[\n\t]/g, ""));
 });
 
 QUnit.test("calcualte addition", async assert => {
@@ -49,5 +48,7 @@ QUnit.test("calcualte addition", async assert => {
 
 	const result = calculator.calculate({ left: { value: 1 }, right: { value: 1 }, operator: "plus" });
 
-	assert.strictEqual(result, `<math display="block"><mn>1</mn><mo>+</mo><mn>1</mn></math>`);
+	assert.strictEqual(result, `
+		<math display="block"><mn>1</mn><mo>+</mo><mn>1</mn></math>
+		<math display="block"><mo>=</mo><mn>2</mn></math>`.replace(/[\n\t]/g, ""));
 });
