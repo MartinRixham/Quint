@@ -17,6 +17,17 @@ export default class Sum {
 
 	calculate() {
 
-		return this.#left.add(this.#right);
+		if (this.#left.add) {
+
+			return this.#left.add(this.#right);
+		}
+		else if (this.#right.add) {
+
+			return this.#right.add(this.#left);
+		}
+		else {
+
+			return this;
+		}
 	}
 }

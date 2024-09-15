@@ -21,4 +21,9 @@ export default class Cosine {
 
 		return null;
 	}
+
+	add(other) {
+
+		return other.add(this.#variable.cosine());
+	}
 }

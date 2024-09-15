@@ -15,18 +15,18 @@ QUnit.test("calculate ket of pi", async assert => {
 	const result = ket.calculate();
 
 	assert.strictEqual(result.format(), `
-      <mrow>
-        <mo>(</mo>
-        <mtable>
-          <mtr>
-            <mtd><mn>0</mn></mtd>
-          </mtr>
-          <mtr>
-            <mtd><mn>1</mn></mtd>
-          </mtr>
-        </mtable>
-        <mo>)</mo>
-      </mrow>`.replace(/\s/g,''));
+		<mrow>
+			<mo>(</mo>
+			<mtable>
+				<mtr>
+					<mtd><mn>0</mn></mtd>
+				</mtr>
+				<mtr>
+					<mtd><mn>1</mn></mtd>
+				</mtr>
+			</mtable>
+			<mo>)</mo>
+		</mrow>`.replace(/[\n\t]/g, ""));
 });
 
 QUnit.test("calculate ket of rational", async assert => {
@@ -38,18 +38,18 @@ QUnit.test("calculate ket of rational", async assert => {
 	const result = ket.calculate();
 
 	assert.strictEqual(result.format(), `
-      <mrow>
-        <mo>(</mo>
-        <mtable>
-          <mtr>
-            <mtd><mo>cos</mo><mfrac><mn>123.456</mn><mn>2<mn></mn></mn></mfrac></mtd>
-		  </mtr>
-	      <mtr>
-            <mtd><mo>sin</mo><mfrac><mn>123.456</mn><mn>2<mn></mn></mn></mfrac></mtd>
-          </mtr>
-        </mtable>
-        <mo>)</mo>
-      </mrow>`.replace(/\s/g,''));
+		<mrow>
+			<mo>(</mo>
+			<mtable>
+				<mtr>
+					<mtd><mo>cos</mo><mfrac><mn>123.456</mn><mn>2<mn></mn></mn></mfrac></mtd>
+				</mtr>
+				<mtr>
+					<mtd><mo>sin</mo><mfrac><mn>123.456</mn><mn>2<mn></mn></mn></mfrac></mtd>
+				</mtr>
+			</mtable>
+			<mo>)</mo>
+		</mrow>`.replace(/[\n\t]/g, ""));
 });
 
 QUnit.test("calculate ket of theta", async assert => {
@@ -61,16 +61,16 @@ QUnit.test("calculate ket of theta", async assert => {
 	const result = ket.calculate();
 
 	assert.strictEqual(result.format(), `
-      <mrow>
-        <mo>(</mo>
-        <mtable>
-          <mtr>
-            <mtd><mo>cos</mo><mfrac><mi>&theta;</mi><mn>2<mn></mn></mn></mfrac></mtd>
-          </mtr>
-          <mtr>
-            <mtd><mo>sin</mo><mfrac><mi>&theta;</mi><mn>2<mn></mn></mn></mfrac></mtd>
-          </mtr>
-        </mtable>
-        <mo>)</mo>
-      </mrow>`.replace(/\s/g,''));
+		<mrow>
+			<mo>(</mo>
+			<mtable>
+				<mtr>
+					<mtd><mo>cos</mo><mfrac><mi>&theta;</mi><mn>2<mn></mn></mn></mfrac></mtd>
+				</mtr>
+				<mtr>
+					<mtd><mo>sin</mo><mfrac><mi>&theta;</mi><mn>2<mn></mn></mn></mfrac></mtd>
+				</mtr>
+			</mtable>
+			<mo>)</mo>
+		</mrow>`.replace(/[\n\t]/g, ""));
 });

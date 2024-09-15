@@ -1,6 +1,7 @@
 import Sine from "~/js/expression/Sine";
 import Cosine from "~/js/expression/Cosine";
 import Matrix from "~/js/expression/Matrix";
+import Sum from "~/js/expression/Sum";
 
 export default class Ket {
 
@@ -19,5 +20,10 @@ export default class Ket {
 	calculate() {
 
 		return new Matrix(1, [new Cosine(this.#variable), new Sine(this.#variable)]);
+	}
+
+	add(other) {
+
+		return new Sum(this.calculate(), other.calculate());
 	}
 }

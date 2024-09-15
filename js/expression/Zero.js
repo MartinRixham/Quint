@@ -12,6 +12,11 @@ export default class Zero {
 		return null;
 	}
 
+	add(other) {
+
+		return other;
+	}
+
 	sine() {
 
 		return new Zero();

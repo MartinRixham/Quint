@@ -13,6 +13,11 @@ export default class Pi {
 		return null;
 	}
 
+	add(other) {
+
+		return other.add("pi");
+	}
+
 	sine() {
 
 		return new Value({ value: 1 });

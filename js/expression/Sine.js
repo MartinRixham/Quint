@@ -21,4 +21,9 @@ export default class Sine {
 
 		return null;
 	}
+
+	add(other) {
+			
+		return other.add(this.#variable.sine());
+	}
 }

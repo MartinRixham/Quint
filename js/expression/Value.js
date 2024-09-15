@@ -19,6 +19,13 @@ export default class Value {
 
 	add(other) {
 
-		return new Value({ value: this.#value.value + other.#value.value });
+		if (other instanceof Value) {
+		
+			return new Value({ value: this.#value.value + other.#value.value });
+		}
+		else {
+
+			return other.add(this);
+		}
 	}
 }
