@@ -1,4 +1,6 @@
 import QUnit from "qunit";
+import "~/test/stringProperties";
+
 import Sum from "~/js/expression/Sum";
 import Value from "~/js/expression/Value";
 import Ket from "~/js/expression/Ket";
@@ -29,7 +31,7 @@ QUnit.test("add kets", async assert => {
 	assert.strictEqual(sum.format(), `
 		<mrow><mo>|</mo><mn>0</mn><mo>&rang;</mo></mrow>
 		<mo>+</mo>
-		<mrow><mo>|</mo><mi>π</mi><mo>&rang;</mo></mrow>`.replace(/[\n\t]/g, ""));
+		<mrow><mo>|</mo><mi>π</mi><mo>&rang;</mo></mrow>`.stripMargin());
 
 	let result = sum.calculate();
 
@@ -44,7 +46,7 @@ QUnit.test("add kets", async assert => {
 			<mo>(</mo>
 			<mtable><mtr><mtd><mn>0</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable>
 			<mo>)</mo>
-		</mrow>`.replace(/[\n\t]/g, ""));
+		</mrow>`.stripMargin());
 
 	result = result.calculate();
 
@@ -53,5 +55,5 @@ QUnit.test("add kets", async assert => {
 			<mo>(</mo>
 			<mtable><mtr><mtd><mn>1</mn></mtd></mtr><mtr><mtd><mn>1</mn></mtd></mtr></mtable>
 			<mo>)</mo>
-		</mrow>`.replace(/[\n\t]/g, ""));
+		</mrow>`.stripMargin());
 });

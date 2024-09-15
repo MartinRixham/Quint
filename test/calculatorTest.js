@@ -1,4 +1,6 @@
 import QUnit from "qunit";
+import "~/test/stringProperties";
+
 import Calculator from "~/js/Calculator";
 
 QUnit.module("calcualtor");
@@ -39,7 +41,7 @@ QUnit.test("calculate ket", async assert => {
 				</mtable>
 				<mo>)</mo>
 			</mrow>
-		</math>`.replace(/[\n\t]/g, ""));
+		</math>`.stripMargin());
 });
 
 QUnit.test("calcualte addition", async assert => {
@@ -50,5 +52,5 @@ QUnit.test("calcualte addition", async assert => {
 
 	assert.strictEqual(result, `
 		<math display="block"><mn>1</mn><mo>+</mo><mn>1</mn></math>
-		<math display="block"><mo>=</mo><mn>2</mn></math>`.replace(/[\n\t]/g, ""));
+		<math display="block"><mo>=</mo><mn>2</mn></math>`.stripMargin());
 });

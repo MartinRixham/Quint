@@ -1,4 +1,6 @@
 import QUnit from "qunit";
+import "~/test/stringProperties";
+
 import Ket from "~/js/expression/Ket";
 import Value from "~/js/expression/Value";
 import Pi from "~/js/expression/Pi";
@@ -26,7 +28,7 @@ QUnit.test("calculate ket of pi", async assert => {
 				</mtr>
 			</mtable>
 			<mo>)</mo>
-		</mrow>`.replace(/[\n\t]/g, ""));
+		</mrow>`.stripMargin());
 });
 
 QUnit.test("calculate ket of rational", async assert => {
@@ -49,7 +51,7 @@ QUnit.test("calculate ket of rational", async assert => {
 				</mtr>
 			</mtable>
 			<mo>)</mo>
-		</mrow>`.replace(/[\n\t]/g, ""));
+		</mrow>`.stripMargin());
 });
 
 QUnit.test("calculate ket of theta", async assert => {
@@ -72,5 +74,5 @@ QUnit.test("calculate ket of theta", async assert => {
 				</mtr>
 			</mtable>
 			<mo>)</mo>
-		</mrow>`.replace(/[\n\t]/g, ""));
+		</mrow>`.stripMargin());
 });

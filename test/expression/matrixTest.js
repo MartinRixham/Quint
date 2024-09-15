@@ -1,4 +1,6 @@
 import QUnit from "qunit";
+import "~/test/stringProperties";
+
 import Matrix from "~/js/expression/Matrix";
 import Value from "~/js/expression/Value";
 
@@ -17,18 +19,18 @@ QUnit.test("format square matrix", async assert => {
 			]);
 
 	assert.strictEqual(matrix.format(), `
-      <mrow>
-        <mo>(</mo>
-        <mtable>
-          <mtr>
-            <mtd><mn>1</mn></mtd>
-            <mtd><mn>2</mn></mtd>
-          </mtr>
-          <mtr>
-            <mtd><mn>3</mn></mtd>
-            <mtd><mn>4</mn></mtd>
-          </mtr>
-        </mtable>
-        <mo>)</mo>
-      </mrow>`.replace(/\s/g,''));
+		<mrow>
+			<mo>(</mo>
+			<mtable>
+				<mtr>
+					<mtd><mn>1</mn></mtd>
+					<mtd><mn>2</mn></mtd>
+				</mtr>
+				<mtr>
+					<mtd><mn>3</mn></mtd>
+					<mtd><mn>4</mn></mtd>
+				</mtr>
+			</mtable>
+			<mo>)</mo>
+		</mrow>`.stripMargin());
 });
