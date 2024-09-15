@@ -40,19 +40,19 @@ export default class Worksheet {
 		catch (error) {
 
 			this.errorMessage = `${error.location.start.column}:${error.message}`;
-			this.result = null;
+			this.result = "";
 		}
 
 		if (syntaxTree) {
 
-			this.errorMessage = null;
+			this.errorMessage = "";
 			this.result = this.#calculator.calculate(syntaxTree);
 		}
 
 		return value;
 	});
 
-	answer = new Update(element => { element.innerHTML = this.result || "" });
+	answer = new Update(element => { element.innerHTML = this.result });
 
-	error = new Text(() => this.errorMessage || "");
+	error = new Text(() => this.errorMessage);
 }
