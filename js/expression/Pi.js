@@ -8,11 +8,6 @@ export default class Pi {
 		return "<mi>π</mi>";
 	}
 
-	calculate() {
-
-		return null;
-	}
-
 	add(other) {
 
 		return other.add("pi");

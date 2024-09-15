@@ -4,9 +4,4 @@ export default class UnknownExpression {
 
 		return "Unknown Expression";
 	}
-
-	calculate() {
-
-		return null;
-	}
 }

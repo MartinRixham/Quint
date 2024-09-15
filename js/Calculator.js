@@ -14,19 +14,13 @@ export default class Calcualtor {
 
 	calculate(expression) {
 
-		let calculation = this.express(expression);
-		let formatted = [];
-
-		while (calculation) {
-
-			formatted.push(calculation.format());
-			calculation = calculation.calculate();
-		}
+		let calculation = this.#express(expression);
+		let formatted = this.#format([], calculation);
 
 		return `${this.#startMaths}${formatted.join(`${this.#endMaths}${this.#startMaths}<mo>=</mo>`)}${this.#endMaths}`;
 	}
 
-	express(expression) {
+	#express(expression) {
 
 		if (expression.identifier) {
 
@@ -45,13 +39,25 @@ export default class Calcualtor {
 		}
 		else if (expression.angle) {
 
-			return new Ket(this.express(expression.angle));
+			return new Ket(this.#express(expression.angle));
 		}
 		else if (expression.operator == "plus") {
 
-			return new Sum(this.express(expression.left), this.express(expression.right));
+			return new Sum(this.#express(expression.left), this.#express(expression.right));
 		}
 
 		return new UnknownExpression();
+	}
+
+	#format(formatted, calculation) {
+
+		if (calculation.calculate) {
+
+			return this.#format(formatted.concat([calculation.format()]), calculation.calculate());
+		}
+		else {
+
+			return formatted.concat([calculation.format()]);
+		}
 	}
 }

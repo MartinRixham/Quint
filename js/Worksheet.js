@@ -52,7 +52,7 @@ export default class Worksheet {
 		return value;
 	});
 
-	answer = new Update(element => { element.innerHTML = this.result });
+	answer = new Update(element => { element.innerHTML = this.result || "" });
 
 	error = new Text(() => this.errorMessage);
 }

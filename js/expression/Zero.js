@@ -7,11 +7,6 @@ export default class Zero {
 		return "<mn>0</mn>";
 	}
 
-	calculate() {
-
-		return null;
-	}
-
 	add(other) {
 
 		return other;

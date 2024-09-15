@@ -12,11 +12,6 @@ export default class Value {
 		return `<mn>${this.#value.value}</mn>`;
 	}
 
-	calculate() {
-
-		return null;
-	}
-
 	add(other) {
 
 		if (other instanceof Value) {

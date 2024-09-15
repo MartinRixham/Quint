@@ -17,11 +17,6 @@ export default class Cosine {
 		return `<mo>cos</mo><mfrac>${this.#variable.format()}<mn>2<mn></mn></mn></mfrac>`;
 	}
 
-	calculate() {
-
-		return null;
-	}
-
 	add(other) {
 
 		return other.add(this.#variable.cosine());

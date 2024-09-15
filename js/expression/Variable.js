@@ -18,9 +18,4 @@ export default class Variable {
 				return identifier ;
 		}
 	}
-
-	calculate() {
-
-		return null;
-	}
 }

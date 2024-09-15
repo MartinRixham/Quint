@@ -24,11 +24,6 @@ export default class Matrix {
 		return string + "</mtable><mo>)</mo></mrow>";
 	}
 
-	calculate() {
-
-		return null;
-	}
-
 	add(other) {
 
 		const sums = [];
